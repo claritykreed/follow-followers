@@ -3,7 +3,7 @@ console.log("This bot checks the list of followers for a user and follows them")
 var Twit = require('twit');
 var config = require('./config');
 var T = new Twit(config);
-var fs = require('fs');
+// var fs = require('fs');
 var params = {
   screen_name: 'andrewstax',
   count: 200,
@@ -11,7 +11,7 @@ var params = {
   };
 
 
-function followFollowers(T) { // follow anyone who is following me
+function followFollowers() { // follow anyone who is following me
 
 	var count = 1;
 
