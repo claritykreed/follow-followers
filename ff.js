@@ -10,14 +10,13 @@ var params = {
   cursor: -1,
   };
 
-
 function followFollowers() { // follow anyone who is following me
 
 	var count = 1;
 
 	T.get('followers/list', params, (err, getdata, response) => {
 		if (err) { console.log("There was a problem") } else { 
-				console.log(getdata);
+				// console.log(getdata);
 				getdata.users.forEach(user => 
 				{
 				// post user name in console
@@ -37,4 +36,6 @@ function followFollowers() { // follow anyone who is following me
 	});
 }
 
-setInterval(followFollowers(), 1000*60*60*24*3.5);
+setInterval(followFollowers, 1000*60*60*24);
+
+// setInterval(followFollowers, 1000*3.5);
